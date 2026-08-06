@@ -94,7 +94,15 @@ if (req.method === "OPTIONS") {
         resource_type: item.resource_type
       })),
 
-      uploadTimeline: []
+      uploadTimeline: [],
+
+      // ============================================================
+      // DEBUG SEMENTARA — cuma untuk mengecek field asli yang dikirim
+      // balik oleh Cloudinary untuk akun ini (supaya tahu kenapa limit
+      // storage/bandwidth kelihatan "tanpa batas"). Field ini tidak
+      // dipakai oleh dashboard, aman dibiarkan / dihapus kapan saja.
+      // ============================================================
+      _debugRawUsage: usage
 
     });
 

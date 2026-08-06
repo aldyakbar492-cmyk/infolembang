@@ -3783,6 +3783,7 @@
             margin: 34px 0 14px;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 8px;
         }
 
@@ -4192,189 +4193,6 @@
             min-height: 18px;
         }
 
-        /* ---------- Cloudinary badge ---------- */
-        .cloudinary-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-left: 8px;
-        }
-
-        .cloudinary-status.ok {
-            background: rgba(34, 197, 94, 0.15);
-            color: #16a34a;
-        }
-
-        .cloudinary-status.off {
-            background: rgba(148, 163, 184, 0.18);
-            color: var(--text-light);
-        }
-
-        /* ---------- Cloudinary Storage — progress bar profesional ---------- */
-        .storage-card {
-            background: var(--surface, #fff);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            box-shadow: var(--shadow);
-            padding: 20px 22px;
-            margin-bottom: 20px;
-        }
-
-        .storage-card-head {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .storage-card-head h4 {
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: var(--heading-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .storage-card-percent {
-            font-size: 1.3rem;
-            font-weight: 800;
-        }
-
-        .storage-progress-track {
-            width: 100%;
-            height: 12px;
-            border-radius: 20px;
-            background: rgba(148, 163, 184, 0.22);
-            overflow: hidden;
-            margin-bottom: 8px;
-        }
-
-        .storage-progress-fill {
-            height: 100%;
-            border-radius: 20px;
-            transition: width 0.4s ease;
-        }
-
-        .storage-progress-fill.status-normal { background: #22c55e; }
-        .storage-progress-fill.status-warning { background: #eab308; }
-        .storage-progress-fill.status-hampir-penuh { background: #f97316; }
-        .storage-progress-fill.status-kritis { background: #ef4444; }
-        .storage-progress-fill.status-penuh { background: #ef4444; }
-        /* Status "Tanpa Batas" — paket fleksibel/pay-as-you-go, bukan kritis */
-        .storage-progress-fill.status-unlimited { background: #3b82f6; }
-
-        /* ---------- Cloudinary Monitor grid (Storage / Bandwidth / Assets) ---------- */
-        .cloudinary-monitor-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-            align-items: start;
-        }
-
-        .cloudinary-monitor-grid .storage-card {
-            margin-bottom: 0;
-            height: 100%;
-        }
-
-        .assets-numbers-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .storage-progress-label {
-            font-size: 0.78rem;
-            color: var(--text-light);
-            margin-bottom: 18px;
-        }
-
-        .storage-numbers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 14px;
-        }
-
-        .storage-number-item .value {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--heading-color);
-        }
-
-        .storage-number-item .label {
-            font-size: 0.72rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-        }
-
-        /* ---------- Storage Warning banner ---------- */
-        .storage-warning-banner {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 16px 20px;
-            border-radius: 14px;
-            margin-bottom: 20px;
-            font-size: 0.88rem;
-            font-weight: 600;
-        }
-
-        .storage-warning-banner i { font-size: 1.5rem; }
-
-        .storage-warning-banner.status-warning {
-            background: rgba(234, 179, 8, 0.14);
-            color: #a16207;
-            border: 1px solid rgba(234, 179, 8, 0.35);
-        }
-
-        .storage-warning-banner.status-hampir-penuh {
-            background: rgba(249, 115, 22, 0.14);
-            color: #c2410c;
-            border: 1px solid rgba(249, 115, 22, 0.35);
-        }
-
-        .storage-warning-banner.status-penuh,
-        .storage-warning-banner.status-kritis {
-            background: rgba(239, 68, 68, 0.16);
-            color: #b91c1c;
-            border: 2px solid #ef4444;
-        }
-
-        /* Notifikasi besar & mudah terlihat saat storage/bandwidth 100% */
-        .storage-warning-banner.status-full-alert {
-            background: #ef4444;
-            color: #fff;
-            border: 2px solid #b91c1c;
-            font-size: 0.98rem;
-            font-weight: 700;
-            box-shadow: var(--shadow-hover);
-        }
-
-        .storage-warning-banner.status-full-alert .btn-kelola-media {
-            background: #fff;
-            color: #b91c1c;
-        }
-
-        .storage-warning-banner .btn-kelola-media {
-            margin-left: auto;
-            flex-shrink: 0;
-            background: #0c315a;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
         /* ---------- Content Analytics — list terbaru ---------- */
         .latest-list-card {
             background: var(--surface, #fff);
@@ -4420,6 +4238,123 @@
             font-size: 0.76rem;
         }
 
+        /* ---------- Video Terbaru — modern card grid ---------- */
+        .video-terbaru-card-wrap {
+            margin-top: 20px;
+        }
+
+        .video-terbaru-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 16px;
+        }
+
+        .video-terbaru-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--text-light);
+            padding: 24px 0;
+            font-size: 0.85rem;
+        }
+
+        .video-terbaru-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--surface, #fff);
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s ease, transform 0.2s ease;
+        }
+
+        .video-terbaru-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .video-terbaru-thumb {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--light-color);
+            overflow: hidden;
+        }
+
+        .video-terbaru-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-terbaru-body {
+            padding: 12px 14px 14px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .video-terbaru-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-terbaru-desc {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        .video-terbaru-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .video-terbaru-date {
+            font-size: 0.74rem;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            min-width: 0;
+        }
+
+        .video-terbaru-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            border-radius: 7px;
+            background: var(--secondary-color);
+            color: var(--dark-color, #071f38);
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .video-terbaru-btn:hover {
+            filter: brightness(1.08);
+        }
+
+        @media (max-width: 480px) {
+            .video-terbaru-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         /* ---------- Publish Activity ---------- */
         .publish-activity-grid {
             display: grid;
@@ -4456,39 +4391,6 @@
         .publish-activity-row strong {
             font-size: 1.05rem;
             color: var(--heading-color);
-        }
-
-        /* ---------- System Notification ---------- */
-        .system-notification-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 20px;
-            border-radius: 14px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin: 8px 0 20px;
-        }
-
-        .system-notification-bar.status-normal {
-            background: rgba(34, 197, 94, 0.12);
-            color: #16a34a;
-        }
-
-        .system-notification-bar.status-warning {
-            background: rgba(234, 179, 8, 0.12);
-            color: #a16207;
-        }
-
-        .system-notification-bar.status-hampir-penuh {
-            background: rgba(249, 115, 22, 0.12);
-            color: #c2410c;
-        }
-
-        .system-notification-bar.status-penuh,
-        .system-notification-bar.status-kritis {
-            background: rgba(239, 68, 68, 0.14);
-            color: #b91c1c;
         }
 
         /* ---------- Responsive ---------- */
@@ -5769,104 +5671,17 @@
                             <div class="latest-list-item"><span class="title-cell">Memuat data…</span></div>
                         </div>
                     </div>
-                    <div class="latest-list-card">
-                        <h4><i class="fas fa-clock"></i> Video Terbaru</h4>
-                        <div id="listVideoTerbaru">
-                            <div class="latest-list-item"><span class="title-cell">Memuat data…</span></div>
-                        </div>
+                </div>
+
+                <div class="latest-list-card video-terbaru-card-wrap">
+                    <h4><i class="fas fa-clock"></i> Video Terbaru</h4>
+                    <div id="listVideoTerbaru" class="video-terbaru-grid">
+                        <div class="video-terbaru-empty">Memuat data…</div>
                     </div>
                 </div>
 
                 <!-- ===================================================
-                     4. CLOUDINARY STORAGE
-                     =================================================== -->
-                <h3 class="analytics-section-title">
-                    <i class="fas fa-cloud"></i> Cloudinary Monitor
-                    <span class="cloudinary-status off" id="cloudinaryStatusBadge">Memuat…</span>
-                </h3>
-                <p class="analytics-section-subtitle">
-                    Storage &amp; Bandwidth di bawah ini nunjukin seberapa penuh kapasitas media (gambar/video) di
-                    Cloudinary. Kalau salah satu kartu menunjukkan <strong>"∞ Tanpa Batas"</strong>, artinya paket
-                    Cloudinary yang dipakai memang tidak punya batas maksimal tetap — jadi tidak akan pernah penuh,
-                    tidak perlu khawatir.
-                </p>
-
-                <div class="cloudinary-monitor-grid">
-                    <!-- ☁ Storage -->
-                    <div class="storage-card">
-                        <div class="storage-card-head">
-                            <h4><i class="fas fa-hdd"></i> Storage</h4>
-                            <span class="storage-card-percent" id="storagePercentText">–</span>
-                        </div>
-                        <div class="storage-progress-track">
-                            <div class="storage-progress-fill status-normal" id="storageProgressFill" style="width:0%"></div>
-                        </div>
-                        <div class="storage-progress-label" id="storageProgressLabel">Memuat data Cloudinary…</div>
-                        <div class="storage-numbers-grid">
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryStorage">…</div>
-                                <div class="label">Storage Terpakai</div>
-                            </div>
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryStorageLimit">…</div>
-                                <div class="label">Storage Maksimal</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 🌐 Bandwidth Bulan Ini -->
-                    <div class="storage-card">
-                        <div class="storage-card-head">
-                            <h4><i class="fas fa-globe"></i> Bandwidth Bulan Ini</h4>
-                            <span class="storage-card-percent" id="bandwidthPercentText">–</span>
-                        </div>
-                        <div class="storage-progress-track">
-                            <div class="storage-progress-fill status-normal" id="bandwidthProgressFill" style="width:0%"></div>
-                        </div>
-                        <div class="storage-progress-label" id="bandwidthProgressLabel">Memuat data Cloudinary…</div>
-                        <div class="storage-numbers-grid">
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryBandwidth">…</div>
-                                <div class="label">Bandwidth Terpakai</div>
-                            </div>
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryBandwidthLimit">…</div>
-                                <div class="label">Bandwidth Maksimal</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 📦 Assets -->
-                    <div class="storage-card">
-                        <div class="storage-card-head">
-                            <h4><i class="fas fa-box-archive"></i> Assets</h4>
-                        </div>
-                        <div class="storage-numbers-grid assets-numbers-grid">
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryImages">…</div>
-                                <div class="label">Jumlah Image</div>
-                            </div>
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryVideos">…</div>
-                                <div class="label">Jumlah Video</div>
-                            </div>
-                            <div class="storage-number-item">
-                                <div class="value loading" id="statCloudinaryAssets">…</div>
-                                <div class="label">Total Asset</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ===================================================
-                     5. STORAGE & BANDWIDTH WARNING — cuma tampil kalau data
-                     limit/percentage-nya tersedia dari Cloudinary
-                     =================================================== -->
-                <div id="storageWarningBanner" style="display:none;"></div>
-                <div id="bandwidthWarningBanner" style="display:none;"></div>
-
-                <!-- ===================================================
-                     6. PUBLISH ACTIVITY
+                     4. PUBLISH ACTIVITY
                      =================================================== -->
                 <h3 class="analytics-section-title"><i class="fas fa-calendar-check"></i> Publish Activity</h3>
                 <div class="publish-activity-grid">
@@ -5899,14 +5714,6 @@
                         <h4><i class="fas fa-calendar-week"></i> Berita Dipublish (7 Hari Terakhir)</h4>
                         <div class="chart-canvas-wrap"><canvas id="chartPublish7Hari"></canvas></div>
                     </div>
-                </div>
-
-                <!-- ===================================================
-                     7. SYSTEM NOTIFICATION — paling bawah
-                     =================================================== -->
-                <div class="system-notification-bar status-normal" id="systemNotificationBar">
-                    <i class="fas fa-circle-check"></i>
-                    <span id="systemNotificationText">Memuat status sistem…</span>
                 </div>
 
                 <p style="text-align:center; color:var(--text-light); font-size:0.75rem; margin-top:10px;">
@@ -6160,78 +5967,6 @@
         }
 
         /* ============================================================
-           BAGIAN 2: cloudinaryService — statistik Cloudinary lewat backend.
-           API Secret Cloudinary TIDAK PERNAH ditaruh di sini. Kode ini cuma
-           memanggil endpoint backend yang kamu siapkan sendiri. Kalau endpoint
-           belum ada, dashboard tetap jalan & kartu Cloudinary tampil "Belum terhubung".
-
-           Contoh backend (Vercel Serverless Function) di /api/cloudinary-stats.js:
-             import { v2 as cloudinary } from "cloudinary";
-             cloudinary.config({
-               cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-               api_key: process.env.CLOUDINARY_API_KEY,
-               api_secret: process.env.CLOUDINARY_API_SECRET, // hanya di server
-             });
-             export default async function handler(req, res) {
-               const usage = await cloudinary.api.usage();
-               res.status(200).json({
-                 totalImages: ..., totalVideos: ...,
-                 storageBytes: usage.storage?.usage ?? 0,
-                 bandwidthBytes: usage.bandwidth?.usage ?? 0,
-                 totalUploads: usage.requests ?? 0,
-                 totalTransformations: usage.transformations?.usage ?? 0,
-                 uploadTimeline: [],
-               });
-             }f
-           ============================================================ */
-        const CLOUDINARY_STATS_ENDPOINT =
-            "https://cloudinary-api-tan.vercel.app/api/cloudinary-stats";
-        async function fetchCloudinaryStats() {
-            try {
-                const res = await fetch(CLOUDINARY_STATS_ENDPOINT, { method: "GET" });
-                if (!res.ok) throw new Error(`Endpoint merespons status ${res.status}`);
-                const json = await res.json();
-                return {
-                    available: true,
-
-                    totalImages: json.totalImages ?? 0,
-                    totalVideos: json.totalVideos ?? 0,
-                    totalAssets: json.totalAssets ?? 0,
-
-                    storageBytes: json.storageBytes ?? 0,
-                    storage: json.storage ?? "0 B",
-                    storageLimitBytes: json.storageLimitBytes ?? null,
-                    storageUsedPercent: json.storageUsedPercent ?? null,
-
-                    bandwidthBytes: json.bandwidthBytes ?? 0,
-                    bandwidth: json.bandwidth ?? "0 B",
-                    bandwidthLimitBytes: json.bandwidthLimitBytes ?? null,
-
-                    creditsUsage: json.creditsUsage ?? null,
-                    creditsLimit: json.creditsLimit ?? null,
-                    creditsUsedPercent: json.creditsUsedPercent ?? null,
-
-                    totalUploads: json.totalUploads ?? 0,
-                    totalTransformations: json.totalTransformations ?? 0,
-
-                    recentUploads: json.recentUploads ?? [],
-                    uploadTimeline: json.uploadTimeline ?? [],
-                };
-            } catch (error) {
-                console.warn("Statistik Cloudinary belum tersedia:", error.message);
-                return { available: false, reason: error.message };
-            }
-        }
-
-        function formatBytes(bytes) {
-            if (!bytes || bytes <= 0) return "0 B";
-            const units = ["B", "KB", "MB", "GB", "TB"];
-            const i = Math.floor(Math.log(bytes) / Math.log(1024));
-            const value = bytes / Math.pow(1024, i);
-            return `${value.toFixed(value >= 10 || i === 0 ? 0 : 1)} ${units[i]}`;
-        }
-
-        /* ============================================================
            BAGIAN 2.5: viewerStatsService — baca agregasi statsHarian /
            statsBulanan / statsTahunan yang ditulis dari index.html utama
            (lihat catatViewAgregat). Kita baca lewat ID dokumen yang sudah
@@ -6286,7 +6021,6 @@
         let beritaData = null;
         let videoData = null;
         let totalKomentar = null;
-        let cloudinaryStats = null;
         let viewerHariIni = null;
         let viewerBulanan = null;
         let viewerTahunan = null;
@@ -6401,11 +6135,6 @@
                 renderIfReady();
             });
 
-            fetchCloudinaryStats().then((stats) => {
-                cloudinaryStats = stats;
-                renderCloudinaryCards();
-            });
-
             unsubStatsHarian = subscribeStatsHarian((data) => {
                 viewerHariIni = data;
                 renderViewerHariIniCard();
@@ -6457,10 +6186,67 @@
             }
         }
 
-        // Artikel & Video Terbaru — list sederhana, pakai data yang sama dengan tabel Top 10
+        // Artikel & Video Terbaru — pakai data yang sama dengan tabel Top 10
         function renderLatestLists(m) {
             renderLatestList("listArtikelTerbaru", m.latestBerita, (item) => item.judul, (item) => item.tanggal);
-            renderLatestList("listVideoTerbaru", m.latestVideo, (item) => item.judul, (item) => item.date);
+            renderVideoTerbaruCards(m.latestVideo);
+        }
+
+        // Placeholder thumbnail (SVG inline, tanpa request eksternal) — dipakai
+        // hanya kalau thumbnail asli DAN fallback YouTube-nya gagal dimuat.
+        const VIDEO_THUMB_PLACEHOLDER = "data:image/svg+xml," + encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225">' +
+            '<rect width="400" height="225" fill="#e2e8f0"/>' +
+            '<circle cx="200" cy="95" r="26" fill="#cbd5e1"/>' +
+            '<polygon points="191,82 191,108 215,95" fill="#f8fafc"/>' +
+            '<text x="200" y="150" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Thumbnail tidak tersedia</text>' +
+            "</svg>"
+        );
+
+        // Deskripsi singkat 80–120 karakter untuk card Video Terbaru
+        function truncateVideoDesc(text) {
+            const trimmed = (text || "").trim();
+            if (!trimmed) return "Belum ada deskripsi.";
+            const max = 110;
+            if (trimmed.length <= max) return trimmed;
+            return trimmed.slice(0, max).trimEnd() + "...";
+        }
+
+        // "Video Terbaru" — card modern (thumbnail, judul, deskripsi singkat,
+        // tanggal upload, tombol Lihat). Pakai data video yang sudah ada
+        // (field title/description/date/thumbnail/videoId), tidak ada data baru.
+        function renderVideoTerbaruCards(list) {
+            const el = document.getElementById("listVideoTerbaru");
+            if (!el) return;
+            if (!list.length) {
+                el.innerHTML = `<div class="video-terbaru-empty">Belum ada video.</div>`;
+                return;
+            }
+            el.innerHTML = list
+                .map((item) => {
+                    const title = item.title || "-";
+                    const thumb = item.thumbnail || VIDEO_THUMB_PLACEHOLDER;
+                    const videoIdSafe = escapeHtml(item.videoId || "");
+                    return `
+                <div class="video-terbaru-card">
+                    <div class="video-terbaru-thumb">
+                        <img src="${escapeHtml(thumb)}" alt="${escapeHtml(title)}" loading="lazy"
+                            onerror="this.onerror=null; this.src='https://img.youtube.com/vi/${videoIdSafe}/hqdefault.jpg'; this.onerror=function(){ this.onerror=null; this.src='${VIDEO_THUMB_PLACEHOLDER}'; };">
+                    </div>
+                    <div class="video-terbaru-body">
+                        <div class="video-terbaru-title" title="${escapeHtml(title)}">${escapeHtml(title)}</div>
+                        <div class="video-terbaru-desc">${escapeHtml(truncateVideoDesc(item.description))}</div>
+                        <div class="video-terbaru-meta">
+                            <span class="video-terbaru-date"><i class="far fa-calendar-alt"></i> ${formatTanggalSingkat(item.date)}</span>
+                            <button type="button" class="video-terbaru-btn"
+                                onclick="hideAnalyticsPage(); if (typeof showVideoDetail === 'function') { showVideoDetail(${item.id}); }">
+                                <i class="fas fa-eye"></i> Lihat
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+                })
+                .join("");
         }
 
         function renderLatestList(containerId, list, getTitle, getDateValue) {
@@ -6491,287 +6277,6 @@
             setStat("paVideoBulanIni", m.publishActivity.video.month.toLocaleString("id-ID"));
         }
 
-        function renderCloudinaryCards() {
-            const badge = document.getElementById("cloudinaryStatusBadge");
-            if (cloudinaryStats && cloudinaryStats.available) {
-                setStat("statCloudinaryStorage", cloudinaryStats.storage);
-                setStat("statCloudinaryBandwidth", cloudinaryStats.bandwidth);
-                setStat("statCloudinaryImages", cloudinaryStats.totalImages.toLocaleString("id-ID"));
-                setStat("statCloudinaryVideos", cloudinaryStats.totalVideos.toLocaleString("id-ID"));
-                setStat(
-                    "statCloudinaryAssets",
-                    cloudinaryStats.totalAssets.toLocaleString("id-ID")
-                );
-                if (badge) {
-                    badge.textContent = "Terhubung";
-                    badge.className = "cloudinary-status ok";
-                }
-            } else {
-                ["statCloudinaryStorage", "statCloudinaryBandwidth", "statCloudinaryImages",
-                    "statCloudinaryVideos", "statCloudinaryAssets"].forEach((id) => {
-                        const el = document.getElementById(id);
-                        if (el) {
-                            el.textContent = "Belum terhubung";
-                            el.classList.add("na");
-                        }
-                    });
-                if (badge) {
-                    badge.textContent = "Backend belum dikonfigurasi";
-                    badge.className = "cloudinary-status off";
-                }
-            }
-            renderCloudinaryUsageSections();
-        }
-
-        /* ============================================================
-           Storage & Bandwidth Warning system — status dihitung dari
-           persentase penggunaan storage/kredit/bandwidth Cloudinary
-           (kalau tersedia dari API/endpoint yang sudah ada). Kalau akun
-           Cloudinary tidak punya limit tetap (pay-as-you-go), bagian
-           warning ini otomatis disembunyikan, TIDAK dipaksakan.
-
-           Ambang batas (indikator UI saja, tidak mengubah data):
-             0–69%  -> normal        🟢
-             70–84% -> warning       🟡
-             85–94% -> hampir-penuh  🟠
-             95–100%-> kritis        🔴 (100% memicu notifikasi besar)
-           ============================================================ */
-        const STATUS_META = {
-            normal: { icon: "fa-circle-check", emoji: "🟢", storageLabel: "Normal", bandwidthLabel: "Normal" },
-            warning: { icon: "fa-triangle-exclamation", emoji: "🟡", storageLabel: "Warning", bandwidthLabel: "Warning" },
-            "hampir-penuh": {
-                icon: "fa-triangle-exclamation", emoji: "🟠",
-                storageLabel: "Hampir Penuh", bandwidthLabel: "Hampir Mencapai Batas",
-            },
-            kritis: {
-                icon: "fa-circle-xmark", emoji: "🔴",
-                storageLabel: "Kritis", bandwidthLabel: "Hampir Habis",
-            },
-        };
-        const STATUS_ORDER = ["normal", "warning", "hampir-penuh", "kritis"];
-
-        function getStoragePercent(stats) {
-            if (!stats || !stats.available) return null;
-            if (typeof stats.storageUsedPercent === "number") return stats.storageUsedPercent;
-            if (typeof stats.creditsUsedPercent === "number") return stats.creditsUsedPercent;
-            return null;
-        }
-
-        // Persentase bandwidth dihitung langsung dari bandwidthBytes & bandwidthLimitBytes
-        // yang sudah dikirim endpoint /api/cloudinary-stats — bukan data/field baru.
-        function getBandwidthPercent(stats) {
-            if (!stats || !stats.available) return null;
-            if (typeof stats.bandwidthLimitBytes === "number" && stats.bandwidthLimitBytes > 0) {
-                return (stats.bandwidthBytes / stats.bandwidthLimitBytes) * 100;
-            }
-            return null;
-        }
-
-        function getUsageStatus(percent) {
-            if (percent === null || percent === undefined) return null;
-            if (percent >= 95) return "kritis";
-            if (percent >= 85) return "hampir-penuh";
-            if (percent >= 70) return "warning";
-            return "normal";
-        }
-
-        function worseStatus(a, b) {
-            if (!a) return b;
-            if (!b) return a;
-            return STATUS_ORDER.indexOf(a) >= STATUS_ORDER.indexOf(b) ? a : b;
-        }
-
-        function renderCloudinaryUsageSections() {
-            const connected = !!(cloudinaryStats && cloudinaryStats.available);
-
-            const storageStatus = renderUsageSection({
-                percent: getStoragePercent(cloudinaryStats),
-                connected,
-                fillId: "storageProgressFill",
-                percentTextId: "storagePercentText",
-                labelId: "storageProgressLabel",
-                limitId: "statCloudinaryStorageLimit",
-                limitText: connected
-                    ? (cloudinaryStats.storageLimitBytes
-                        ? formatBytes(cloudinaryStats.storageLimitBytes)
-                        : cloudinaryStats.creditsLimit
-                            ? `${cloudinaryStats.creditsLimit} kredit`
-                            : "Tanpa batas tetap")
-                    : "–",
-                // Bahasa sederhana buat yang bukan IT: kalau paket Cloudinary-nya
-                // tidak punya batas storage tetap (paket fleksibel/pay-as-you-go),
-                // jelaskan artinya, jangan cuma tulis "tidak ada batas".
-                unlimitedMessage:
-                    "Paket Cloudinary ini tidak punya batas storage tetap (tipe fleksibel/pay-as-you-go), jadi tidak akan pernah \"penuh\". Kamu cukup pantau angka Storage Terpakai di atas.",
-                notConnectedMessage: "Cloudinary belum terhubung.",
-                labelKey: "storageLabel",
-                bannerId: "storageWarningBanner",
-                type: "storage",
-            });
-
-            const bandwidthStatus = renderUsageSection({
-                percent: getBandwidthPercent(cloudinaryStats),
-                connected,
-                fillId: "bandwidthProgressFill",
-                percentTextId: "bandwidthPercentText",
-                labelId: "bandwidthProgressLabel",
-                limitId: "statCloudinaryBandwidthLimit",
-                limitText: connected
-                    ? (cloudinaryStats.bandwidthLimitBytes ? formatBytes(cloudinaryStats.bandwidthLimitBytes) : "Tanpa batas tetap")
-                    : "–",
-                unlimitedMessage:
-                    "Paket Cloudinary ini tidak punya batas bandwidth bulanan yang tetap (tipe fleksibel/pay-as-you-go), jadi tidak akan pernah \"habis\". Kamu cukup pantau angka Bandwidth Terpakai di atas.",
-                notConnectedMessage: "Cloudinary belum terhubung.",
-                labelKey: "bandwidthLabel",
-                bannerId: "bandwidthWarningBanner",
-                type: "bandwidth",
-            });
-
-            renderSystemNotification(worseStatus(storageStatus, bandwidthStatus));
-        }
-
-        function renderUsageSection(cfg) {
-            const status = getUsageStatus(cfg.percent);
-            const fillEl = document.getElementById(cfg.fillId);
-            const percentTextEl = document.getElementById(cfg.percentTextId);
-            const labelEl = document.getElementById(cfg.labelId);
-            const limitEl = document.getElementById(cfg.limitId);
-
-            if (cfg.percent === null && !cfg.connected) {
-                // Belum terhubung ke backend Cloudinary sama sekali.
-                if (fillEl) {
-                    fillEl.style.width = "0%";
-                    fillEl.className = "storage-progress-fill status-normal";
-                }
-                if (percentTextEl) percentTextEl.textContent = "–";
-                if (labelEl) labelEl.textContent = cfg.notConnectedMessage;
-                if (limitEl) {
-                    limitEl.textContent = "–";
-                    limitEl.classList.add("na");
-                }
-            } else if (cfg.percent === null) {
-                // Sudah terhubung, tapi paketnya memang tidak punya batas tetap —
-                // tampilkan sebagai status "Tanpa Batas" yang jelas, bukan kosong/bingung.
-                if (fillEl) {
-                    fillEl.style.width = "100%";
-                    fillEl.className = "storage-progress-fill status-unlimited";
-                }
-                if (percentTextEl) percentTextEl.textContent = "∞ Tanpa Batas";
-                if (labelEl) labelEl.textContent = `✅ ${cfg.unlimitedMessage}`;
-                if (limitEl) {
-                    limitEl.classList.remove("na");
-                    limitEl.textContent = cfg.limitText;
-                }
-            } else {
-                if (fillEl) {
-                    fillEl.style.width = `${Math.min(cfg.percent, 100)}%`;
-                    fillEl.className = `storage-progress-fill status-${status}`;
-                }
-                if (percentTextEl) percentTextEl.textContent = `${cfg.percent.toFixed(1)}%`;
-                if (labelEl) {
-                    labelEl.textContent = `${STATUS_META[status].emoji} Status: ${STATUS_META[status][cfg.labelKey]}`;
-                }
-                if (limitEl) {
-                    limitEl.classList.remove("na");
-                    limitEl.textContent = cfg.limitText;
-                }
-            }
-
-            renderUsageWarningBanner(cfg.bannerId, cfg.percent === null ? null : status, cfg.type, cfg.percent);
-            return cfg.percent === null ? null : status;
-        }
-
-        function renderUsageWarningBanner(bannerId, status, type, percent) {
-            const el = document.getElementById(bannerId);
-            if (!el) return;
-
-            if (!status || status === "normal") {
-                el.style.display = "none";
-                el.innerHTML = "";
-                if (type === "storage") toggleUploadDisabled(false);
-                return;
-            }
-
-            const isFull = percent !== null && percent >= 100;
-            const meta = STATUS_META[status];
-            const label = type === "storage" ? "Storage" : "Bandwidth";
-            let message = "";
-            let showButton = false;
-
-            if (isFull) {
-                message = type === "storage"
-                    ? "🚨 Storage Cloudinary telah penuh."
-                    : "🚨 Bandwidth Cloudinary telah mencapai batas paket bulan ini.";
-                showButton = true;
-            } else if (status === "warning") {
-                message = type === "storage"
-                    ? "Storage Cloudinary mulai mendekati batas. Pertimbangkan membersihkan media yang tidak terpakai."
-                    : "Bandwidth Cloudinary bulan ini mulai mendekati batas paket.";
-            } else if (status === "hampir-penuh") {
-                message = type === "storage"
-                    ? "Storage Cloudinary hampir penuh. Segera kelola media untuk menghindari gangguan upload."
-                    : "Bandwidth Cloudinary hampir mencapai batas paket bulan ini.";
-                showButton = true;
-            } else if (status === "kritis") {
-                message = type === "storage"
-                    ? "Storage Cloudinary dalam kondisi kritis, hampir mencapai batas maksimal."
-                    : "Bandwidth Cloudinary dalam kondisi kritis, hampir habis untuk bulan ini.";
-                showButton = true;
-            }
-
-            el.style.display = "flex";
-            el.className = `storage-warning-banner status-${status}${isFull ? " status-full-alert" : ""}`;
-            el.innerHTML = `
-                <i class="fas ${isFull ? "fa-triangle-exclamation" : meta.icon}"></i>
-                <span>${escapeHtml(message)}</span>
-                ${showButton ? `<button type="button" class="btn-kelola-media" onclick="window.open('https://console.cloudinary.com/console/media_library','_blank')">Kelola Media</button>` : ""}
-            `;
-
-            if (type === "storage") toggleUploadDisabled(isFull);
-        }
-
-        // Nonaktifkan input upload gambar/video kalau storage penuh — cuma toggle
-        // atribut "disabled" bawaan HTML, tidak mengubah function/struktur lain.
-        function toggleUploadDisabled(disabled) {
-            document.querySelectorAll('input[type="file"]').forEach((el) => {
-                el.disabled = disabled;
-            });
-        }
-
-        function renderSystemNotification(status) {
-            const bar = document.getElementById("systemNotificationBar");
-            const text = document.getElementById("systemNotificationText");
-            if (!bar || !text) return;
-
-            const s = status || "normal";
-            bar.className = `system-notification-bar status-${s}`;
-
-            const icon = bar.querySelector("i");
-            if (icon) icon.className = `fas ${STATUS_META[s].icon}`;
-
-            const storagePercent = getStoragePercent(cloudinaryStats);
-            const bandwidthPercent = getBandwidthPercent(cloudinaryStats);
-
-            if (s === "normal") {
-                text.textContent = "Semua layanan berjalan normal.";
-            } else if (s === "warning") {
-                text.textContent = `Penggunaan Cloudinary mendekati batas (Storage ${storagePercent !== null ? storagePercent.toFixed(0) : "-"}%, Bandwidth ${bandwidthPercent !== null ? bandwidthPercent.toFixed(0) : "-"}%).`;
-            } else if (s === "hampir-penuh") {
-                text.textContent = `Storage/Bandwidth Cloudinary hampir penuh (Storage ${storagePercent !== null ? storagePercent.toFixed(0) : "-"}%, Bandwidth ${bandwidthPercent !== null ? bandwidthPercent.toFixed(0) : "-"}%).`;
-            } else if (s === "kritis") {
-                const isStorageFull = storagePercent !== null && storagePercent >= 100;
-                const isBandwidthFull = bandwidthPercent !== null && bandwidthPercent >= 100;
-                if (isStorageFull && isBandwidthFull) {
-                    text.textContent = "🚨 Storage dan Bandwidth Cloudinary telah mencapai batas maksimal.";
-                } else if (isStorageFull) {
-                    text.textContent = "🚨 Storage Cloudinary telah penuh.";
-                } else if (isBandwidthFull) {
-                    text.textContent = "🚨 Bandwidth Cloudinary telah mencapai batas paket bulan ini.";
-                } else {
-                    text.textContent = "Storage/Bandwidth Cloudinary dalam kondisi kritis, segera periksa penggunaan.";
-                }
-            }
-        }
 
         function renderViewerHariIniCard() {
             if (!viewerHariIni) return;
