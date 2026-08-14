@@ -564,7 +564,7 @@
         .category {
             display: inline-block;
             background-color: var(--secondary-color);
-            color: var(--white);
+            color: #000;
             padding: 5px 10px;
             border-radius: 3px;
             font-size: 12px;
@@ -781,7 +781,7 @@
             top: 10px;
             left: 10px;
             background-color: var(--secondary-color);
-            color: var(--white);
+            color: #000;
             padding: 3px 8px;
             border-radius: 3px;
             font-size: 11px;
@@ -1899,7 +1899,7 @@
             visibility: visible;
             transform: none;
             box-shadow: none;
-            background-color: rgba(0, 0, 0, 0.15);
+            background-color: #fff;
             border-radius: 8px;
             display: none;
             margin: 2px 0 4px;
@@ -1912,7 +1912,7 @@
         }
 
         .app-sidebar .dropdown-menu li a {
-            color: rgba(255, 255, 255, 0.65) !important;
+            color: #000 !important;
             padding: 9px 12px 9px 44px !important;
             font-size: 13px !important;
             border-radius: 0 !important;
@@ -2191,7 +2191,7 @@
             display: inline-block;
             align-self: flex-start;
             background-color: var(--secondary-color);
-            color: var(--primary-color);
+            color: #000;
             padding: 2px 8px;
             border-radius: 3px;
             font-size: 10px;
@@ -4567,50 +4567,34 @@
                                 <li>
                                     <a href="#" onclick="
                         setView('berita');
-                        filterKategori('Inspirasi');
+                        filterKategori('Wisata');
                         closeSidebar();
                         return false;
-                      ">Inspirasi</a>
+                      ">Wisata</a>
                                 </li>
                                 <li>
                                     <a href="#" onclick="
                         setView('berita');
-                        filterKategori('Travel');
+                        filterKategori('Event');
                         closeSidebar();
                         return false;
-                      ">Travel</a>
+                      ">Event</a>
                                 </li>
                                 <li>
                                     <a href="#" onclick="
                         setView('berita');
-                        filterKategori('Social');
+                        filterKategori('Sejarah & Budaya');
                         closeSidebar();
                         return false;
-                      ">Social</a>
+                      ">Sejarah & Budaya</a>
                                 </li>
                                 <li>
                                     <a href="#" onclick="
                         setView('berita');
-                        filterKategori('Tech');
+                        filterKategori('Jelajah');
                         closeSidebar();
                         return false;
-                      ">Tech</a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="
-                        setView('berita');
-                        filterKategori('Nyunda');
-                        closeSidebar();
-                        return false;
-                      ">Nyunda</a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="
-                        setView('berita');
-                        filterKategori('Olahraga');
-                        closeSidebar();
-                        return false;
-                      ">Olahraga</a>
+                      ">Jelajah</a>
                                 </li>
                             </ul>
                         </li>
@@ -5069,12 +5053,10 @@
                                     <select id="videoKategori" onchange="cmsClearError('grp-videoKategori')">
                                         <option value="">-- Pilih Kategori --</option>
                                         <option value="Kuliner">Kuliner</option>
-                                        <option value="Inspirasi">Inspirasi</option>
-                                        <option value="Travel">Travel</option>
-                                        <option value="Social">Social</option>
-                                        <option value="Tech">Tech</option>
-                                        <option value="Nyunda">Nyunda</option>
-                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Wisata">Wisata</option>
+                                        <option value="Sejarah & Budaya">Sejarah & Budaya</option>
+                                        <option value="Jelajah">Jelajah</option>
                                     </select>
                                     <span class="cms-error-text" id="err-videoKategori"><i
                                             class="fas fa-circle-exclamation"></i> Kategori wajib dipilih.</span>
@@ -5182,14 +5164,12 @@
                                     <label class="cms-label" for="kategori"><i class="fas fa-tags"></i> Kategori <span
                                             class="req">*</span></label>
                                     <select id="kategori" onchange="cmsClearError('grp-kategori')">
-                                        <option value="">-- Pilih Kategori --</option>
+                                         <option value="">-- Pilih Kategori --</option>
                                         <option value="Kuliner">Kuliner</option>
-                                        <option value="Inspirasi">Inspirasi</option>
-                                        <option value="Travel">Travel</option>
-                                        <option value="Social">Social</option>
-                                        <option value="Tech">Tech</option>
-                                        <option value="Nyunda">Nyunda</option>
-                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Wisata">Wisata</option>
+                                        <option value="Sejarah & Budaya">Sejarah & Budaya</option>
+                                        <option value="Jelajah">Jelajah</option>
                                     </select>
                                     <span class="cms-error-text" id="err-kategori"><i
                                             class="fas fa-circle-exclamation"></i> Kategori wajib dipilih.</span>
@@ -6938,7 +6918,7 @@
                   ${trendingBadge}
                 </div>
                 <div class="video-description">
-                  <span style="display: inline-block; background: var(--secondary-color); color: #fff; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px">${item.category}</span>
+                  <span style="display: inline-block; background: var(--secondary-color); color: #000; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px">${item.category}</span>
                   <h4 style="margin: 4px 0 8px; color: var(--heading-color); font-size: 16px; line-height: 1.4">${item.title}</h4>
                   <div class="video-meta">
                     <span><i class="far fa-calendar-alt"></i> ${formatTanggal(item.date)}</span>
